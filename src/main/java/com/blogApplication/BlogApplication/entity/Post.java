@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.apachecommons.CommonsLog;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
@@ -47,7 +48,9 @@ private String category;
 @UpdateTimestamp
     private Instant updatedAt;
 
-45
+@ManyToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id" , nullable = false)
+    private User author;
 
 
 
