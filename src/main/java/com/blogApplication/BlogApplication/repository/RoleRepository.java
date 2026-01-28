@@ -1,6 +1,7 @@
 package com.blogApplication.BlogApplication.repository;
 
-import com.blogApplication.BlogApplication.entity.Role;
+import com.blogApplication.BlogApplication.Entity.Role;
+import com.blogApplication.BlogApplication.Entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

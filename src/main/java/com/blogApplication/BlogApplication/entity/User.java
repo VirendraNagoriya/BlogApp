@@ -1,6 +1,11 @@
 package com.blogApplication.BlogApplication.Entity;
 
 
+import jakarta.persistence.JoinColumns;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,7 +40,7 @@ public class User
     @ManyToMany(fetch =FetchType.EAGER)
     @JoinTable (
             name = "user_roles",
-            JoinColumns = @JoinColumn(name = "user_id") ,
+            JoinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumns(name ="role_id")
     )
     private Set<Role> roles;

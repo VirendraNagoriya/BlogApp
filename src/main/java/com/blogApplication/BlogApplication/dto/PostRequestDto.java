@@ -2,6 +2,8 @@ package com.blogApplication.BlogApplication.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
+import java.util.List;
+
 public class PostRequestDto {
 
     @NotBlank
