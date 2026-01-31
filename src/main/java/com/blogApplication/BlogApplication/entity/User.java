@@ -37,11 +37,11 @@ public class User
     @Column(unique = true,nullable=false)
     private String email;
 
-    @ManyToMany(fetch =FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable (
             name = "user_roles",
-            JoinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumns(name ="role_id")
+            joinColumns = @JoinColumn(name="user_id"),
+            inverseJoinColumns = @JoinColumn(name ="role_id")
     )
     private Set<Role> roles;
 
